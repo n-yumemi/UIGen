@@ -1,0 +1,280 @@
+/* --- * --- * --- * --- *
+  INDEX
+  * Import
+  * Base
+  * Icon
+  * Parts
+    * Controller
+    * Area
+  * Toppage
+    * Header
+    * Footer
+    * Toolbar
+  * Small display
+* --- * --- * --- * --- */
+
+
+/* --- * --- * --- * --- *
+  Import
+ * --- * --- * --- * --- */
+@import "variable.scss";
+@import "../assets/fontawesome-free-5.15.2-web/scss/fontawesome.scss";
+@import "../assets/fontawesome-free-5.15.2-web/scss/solid.scss";
+@import "../assets/fontawesome-free-5.15.2-web/scss/regular.scss";
+@import "../assets/fontawesome-free-5.15.2-web/scss/brands.scss";
+
+
+/* --- * --- * --- * --- *
+  Base
+ * --- * --- * --- * --- */
+body {
+  min-width: 320px;
+  color: $color-text;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: $text-weight-nomal;
+  font-size: $text-size-base;
+  box-sizing: border-box;
+  text-align: left;
+  line-height: $text-size-large-ex-ex;
+  background-color: $color-background;
+  background-size: contain;
+}
+button, input, select, textarea {
+  height: $text-size-large-ex-ex;
+}
+input {
+  &::placeholder {
+    color: $color-text-sample;
+  }
+  &[type="text"] {
+    padding: 4px;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: $text-size-base;
+    font-weight: $text-weight-nomal;
+    border: 1px solid $color-border-onlight;
+    border-radius: 4px;
+  }
+}
+
+/* --- Pane --- */
+.whole {
+  width: 100%;
+  height: 100%;
+  .section {
+    width: 100%;
+    margin: auto;
+    .contents {
+      position: relative;
+      height: 100%;
+    }
+  }
+}
+
+
+/* --- * --- * --- * --- *
+  Icon
+ * --- * --- * --- * --- */
+// Fontawesome: https://fontawesome.com/icons?d=gallery
+.icon-add {
+  @extend %fa-icon;
+  @extend .fas;
+  &:before {
+    content: fa-content($fa-var-plus);
+    font-size: $text-size-large;
+  }
+}
+.icon-remove {
+  @extend %fa-icon;
+  @extend .fas;
+  &:before {
+    content: fa-content($fa-var-minus);
+    font-size: $text-size-large;
+  }
+}
+.icon-check-off {
+  @extend %fa-icon;
+  @extend .far;
+  &:before {
+    content: fa-content($fa-var-check-square);
+    font-size: $text-size-large;
+    color: $color-background-accent;
+  }
+}
+.icon-check-on {
+  @extend %fa-icon;
+  @extend .fas;
+  &:before {
+    content: fa-content($fa-var-check-square);
+    font-size: $text-size-large;
+    color: $color-background-accent;
+  }
+}
+.icon-comment {
+  @extend %fa-icon;
+  @extend .far;
+  &:before {
+    content: fa-content($fa-var-comment-alt);
+    font-size: $text-size-large;
+  }
+}
+.icon-paypal {
+  @extend %fa-icon;
+  @extend .fab;
+  &:before {
+    content: fa-content($fa-var-paypal);
+    font-size: $text-size-large;
+    font-weight: $text-weight-parts;
+  }
+}
+
+
+/* --- * --- * --- * --- *
+  Parts
+ * --- * --- * --- * --- */
+/* --- Controller --- */
+.button {
+  display: inline-block;
+  color: $color-main;
+  border: 1px solid $color-main;
+  background-color: $color-white;
+  font-size: $text-size-base;
+  font-weight: $text-weight-parts;
+  text-align: center;
+  border-radius: 8px;
+  padding: 2px 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-main-week;
+  }
+  &.icon {
+    font-weight: $text-weight-parts;
+    > i {
+      font-weight: $text-weight-parts;
+      &::before {
+        margin-right: 4px;
+        font-weight: $text-weight-nomal;
+      }
+    }
+  }
+}
+
+/* --- Area --- */
+.toolbar {
+  display: flex;
+  padding: 0 1rem 0.5rem;
+  border-bottom: 1px solid $color-border-onlight;
+  font-size: $text-size-base;
+  font-weight: $text-weight-parts;
+  justify-content: space-between;
+}
+.contents {
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  > .content {
+    display: none; /* Views Hidden */
+    width: 100%;
+    height: calc(100% * 2);
+    &.active {
+      display: block;
+    }
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &.model {
+    display: flex;
+    flex-direction: row;
+  }
+  &.graphic {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 1em;
+    font-family: 'Kosugi Maru', sans-serif;
+  }
+}
+
+
+/* --- * --- * --- * --- *
+  Toppage
+ * --- * --- * --- * --- */
+/* --- Header --- */
+.header {
+  display: flex;
+  padding: 16px 16px 24px;
+  align-items: center;
+  justify-content: space-between;
+  .header-info {
+    display: inline-flex;
+    align-items: flex-end;
+    .title {
+      font-size: $text-size-large-ex-ex;
+      font-weight: $text-weight-title;
+      span {
+        font-size: $text-size-base;
+      }
+    }
+    .header-caption {
+      margin-left: 0.45em;
+      font-size: $text-size-base;
+    }
+  }
+  .header-nav {
+    font-weight: $text-weight-parts;
+    text-align: right;
+    li {
+      display: inline-block;
+      margin-left: 4px;
+    }
+  }
+}
+
+/* --- Footer --- */
+.footer {
+  display: none;
+}
+
+/* --- Toolbar --- */
+.toolbar {
+  .button {
+    display: inline-flex;
+    height: 100%;
+    padding: 0.45em;
+    font-size: inherit;
+    font-weight: $text-weight-nomal;
+    &::before {
+      font-size: $text-size-large;
+    }
+  }
+
+  /*  Segmented Controller */
+  .toolbar-segment {
+    display: inline-block;
+    text-align: center;
+    color: $color-main;
+    background-color: $color-white;
+    border: 1px solid $color-main;
+    border-radius: 8px;
+    > li {
+      display: inline-flex;
+      padding: 0 8px;
+      border-right: 1px solid $color-main;
+      cursor: pointer;
+      &:first-child {
+        border-radius: 6px 0 0 6px;
+      }
+      &:last-child {
+        border-right: 0;
+        border-radius: 0 6px 6px 0;
+      }
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    .active {
+      color: $color-white;
+      background-color: $color-main;
+    }
+  }
+}
+

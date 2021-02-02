@@ -1,0 +1,17 @@
+/* --- * --- * ---
+    Small display
+--- * --- * --- */
+@media screen and (max-width: 632px) {
+  // Header
+  .header-caption {
+    display: none;
+  }
+  // Parts
+  .toolbar {
+    display: table;
+    width: 100%;
+    .toolbar-segment {
+      margin-bottom: 1em;
+    }
+  }
+}

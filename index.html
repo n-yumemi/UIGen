@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover" />
+    <link rel="canonical" href="https://uigen.jp/" />
+
+    <title>UIGen | User Interface Generator</title>
+    <meta name="description" content="UIGenはUIの見た目を簡単に生成するツールです。エンティティ、プロパティ、アクションを入力して、オブジェクト指向UI、タスクベースUI、ユースケースやモデルに変換して見ることができます。" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/image/favicon/favicon.svg" >
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/image/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="152x152" href="/image/favicon/favicon_152.png">
+
+    <!-- OGP -->
+    <meta property="og:title" content="UIGen | User Interface Generator">
+    <meta name="author" content="yumemi" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="『UIGen』は簡単にUIを生成するツールです。エンティティ、プロパティ、アクションを入力すると、ユースケースやモデル、タスクベースUI、そしてオブジェクト指向UIにして見ることができます。">
+    <meta property="og:url" content="https://uigen.jp/">
+    <meta property="og:site_name" content="UIGen | User Interface Generator">
+    <meta property="og:image" content="https://uigen.jp/image/thumbnail/uigen.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="/css/minireset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/underlayer.css" />
+    <link rel="stylesheet" href="/css/mediaquery.css" />
+  </head>
+  <body>
+    <div id="app" class="whole">
+     
+      <!-- Header -->
+      <header id="header" class="section header">
+        <div class="header-info">
+          <h1 class="title">UIGen<span>Beta</span></h1>
+          <p class="header-caption">User Interface Generator</p>
+        </div>
+        <ul class="header-nav">
+          <li><a class="button icon" href="https://paypal.me/dreamui?locale.x=ja_JP" target="_blank"><i class="icon-paypal">応援</i></a></li>
+          <li><a class="button icon" href="https://twitter.com/n__yumemi" target="_blank"><i class="icon-comment">フィードバック</i></a></li>
+        </ul>
+      </header>
+
+      <!-- Main -->
+      <main class="section main">
+        <div id="toolbar" class="toolbar">
+          <div class="centering">
+            <ul id="select-orientation" class="toolbar-segment">
+              <li id="orient-usecase">ユースケース
+              <li id="orient-class">クラス
+              <li id="orient-task">タスク
+              <li id="orient-object" class="active">オブジェクト
+            </ul>
+          </div>
+          <div class="trailering">
+            <ul class="button-list">
+              <li>
+                <button class="button" type="button" v-on:click="clearObjects">クリア</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="contents" class="contents">
+          <div class="content model contents-usecase">
+            <?php include(__DIR__.'/content-model-usecase.html'); ?>
+          </div>
+         
+          <div class="content model contents-model">
+            <?php include(__DIR__.'/content-model-class.html'); ?>
+          </div>
+          
+          <div class="content graphic contents-task">
+            <?php include(__DIR__.'/content-graph-task.html'); ?>
+          </div>
+          
+          <div class="content graphic contents-object active">
+            <?php include(__DIR__.'/content-graph-object.html'); ?>
+          </div>
+        </div>
+      </main>
+    </div>
+    
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src='/js/display.js'></script>
+    <script src='/js/model.js'></script>
+  </body>
+</html>

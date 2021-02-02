@@ -1,0 +1,419 @@
+/* --- * --- * --- * --- *
+  INDEX
+  * Import
+  * UI Common
+  * Model
+  * Graphic
+  * Model: Class
+  * Model: Usecase
+  * Graphic: Task-Orientation
+  * Graphic: Object-Orientation
+* --- * --- * --- * --- */
+
+
+/* --- * --- * --- * --- *
+  Import
+ * --- * --- * --- * --- */
+@import "variable.scss";
+
+
+/* --- * --- * --- * --- *
+  UI Common
+ * --- * --- * --- * --- */
+.frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 700px;
+  height: 400px;
+  margin: auto;
+  &.model-class {
+    width: 200px;
+    height: fit-content;
+  }
+  &.graphic-task {
+    position: initial;
+    width: 350px;
+    height: 220px;
+    margin-bottom: 32px;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+}
+.frame-style {
+  background-color: $color-background;
+  border-radius: 4px;
+  box-shadow: 0 0.2px 3.6px rgba(0, 0, 0, 0.1),
+              0 1.3px 10px rgba(0, 0, 0, 0.056),
+              0 4.8px 24.1px rgba(0, 0, 0, 0.05),
+              0 20px 80px rgba(0, 0, 0, 0.043);
+}
+.button-mini {
+  padding: 0px 4px;
+  font-size: $text-size-base;
+  color: $color-background-accent;
+  background-color: $color-background;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  &.style-reverse {
+    color: $color-text-reverse;
+    background-color: $color-background-accent;
+  }
+  &.and-text {
+    ::before {
+      margin-right: 4px;
+    }
+  }
+}
+
+
+/* --- * --- * --- * --- *
+  Model
+ * --- * --- * --- * --- */
+ .model-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .item {
+    .text {
+      font-size: $text-size-base;
+      font-weight: $text-weight-parts;
+    }
+  }
+  .add {
+    .button-mini {
+      padding: 0px 8px;
+    }
+  }
+}
+.model-main {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+
+/* --- * --- * --- * --- *
+  Graphic
+ * --- * --- * --- * --- */
+ .graphic-header {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: flex-end;
+  align-items: center;
+  .add {
+    .button-mini {
+      padding: 0px 8px;
+    }
+  }
+}
+.graphic-navigation {
+  display: flex;
+  min-height: 40px;
+  background-color: $color-background-accent;
+  color: $color-text-reverse;
+  border-radius: 4px 4px 0 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  .title {
+    margin-right: auto;
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    .input {
+      color: $color-text-reverse;
+      border-color: $color-border-ondark;
+      background-color: $color-background-accent;
+    }
+  }
+  .add {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    > li {
+      display: inline-flex;
+      height: 100%;
+      padding-left: 8px;
+      align-items: center;
+      cursor: pointer;
+      &.active {
+        background-color: $color-background-highlight;
+        input[type="text"] {
+          border-color: $color-border-onlight;
+          background-color: $color-background-highlight;
+        }
+        .button-mini {
+          background-color: $color-background-highlight;
+        }
+      }
+      input[type="text"] {
+        color: $color-text-reverse;
+        border-color: $color-border-ondark;
+        background-color: $color-background-accent;
+      }
+    }
+  }
+}
+.graphic-head {
+  padding: 8px 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.graphic-caption {
+  font-size: $text-size-base;
+  &.padding {
+    padding: 8px 8px 0;
+  }
+}
+.graphic-main {
+  font-size: $text-size-base;
+  overflow-y: auto;
+  .main {
+    overflow-y: auto;
+  }
+}
+
+
+/* --- * --- * --- * --- *
+  Model: Class
+ * --- * --- * --- * --- */
+.block-class {
+  width: 240px;
+  height: fit-content;
+  margin-bottom: 32px;
+  font-size: $text-size-base;
+  .block {
+    padding: 8px;
+    border-bottom: 1px solid $color-border-onlight;
+    .buttons {
+      display: block;
+      text-align: right;
+    }
+    .title {
+      display: flex;
+      margin-bottom: 4px;
+      justify-content: space-between;
+    }
+    .list > li {
+      display: flex;
+      margin-bottom: 4px;
+      .button-mini {
+        width: 24px;
+        margin-left: 8px;
+      }
+    }
+    input[type="text"] {
+      width: 100%;
+    }
+    &.object-name {
+      padding-top: 0;
+      color: $color-text-reverse;
+      border-color: $color-border-ondark;
+      background-color: $color-background-accent;
+      border-radius: 4px 4px 0 0;
+      input[type="text"] {
+        color: $color-text-reverse;
+        border-color: $color-border-ondark;
+        background-color: $color-background-accent;
+      }
+    }
+  }
+  .block:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+/* --- * --- * --- * --- *
+  Model: Usecase
+ * --- * --- * --- * --- */
+.model-usecase {
+  width: 100%;
+  font-size: $text-size-base;
+  justify-content: center;
+}
+.block-usecase {
+  width: 80%;
+  height: fit-content;
+  padding: 16px;
+  margin-bottom: 32px;
+  .title {
+    font-size: $text-size-large;
+    font-weight: $text-weight-parts;
+  }
+  .item-list {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $color-border-onlight;
+    > li {
+      display: inline-block;
+      margin-right: 4px;
+      margin-bottom: 8px;
+      button {
+        background-color: $color-clear;
+      }
+    }
+    &:last-child {
+      padding-bottom: 0px;
+      border-bottom: 0;
+    }
+    .add {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+/* --- * --- * --- * --- *
+  Graphic: Task-Orientation
+ * --- * --- * --- * --- */
+ .graphic-task {
+  .graphic-main {
+    height: calc(100% - 44px);
+    overflow: hidden;
+    overflow-y: auto;
+    &.area {
+      padding: 8px;
+    }
+    .list > li {
+      display: flex;
+      width: 100%;
+      margin-bottom: 4px;
+      input[type="text"] {
+        width: 100%;
+      }
+      > .button-mini {
+        width: 24px;
+        margin-left: 8px;
+      }
+      &.add {
+        padding: 8px;
+        > .button-mini {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .task-lead {
+    margin-bottom: 4px;
+    font-weight: $text-weight-parts;
+  }
+  .task-property-buttons {
+    padding: 4px;
+  }
+  .task-property-table {
+    width: 100%;
+    th,
+    td {
+      padding: 4px;
+      vertical-align: baseline;
+    }
+    tr th:first-child,
+    tr td:first-child {
+      width: 24px;
+      text-align: center;
+    }
+    .head {
+      border-bottom: 1px solid $color-border-onlight;
+    }
+  }
+ }
+
+
+/* --- * --- * --- * --- *
+  Graphic: Object-Orientation
+ * --- * --- * --- * --- */
+.graphic-ooui {
+  margin: 40px auto;
+  .graphic-object-name {
+    font-weight: 400;
+  }
+  .graphic-actions {
+    text-align: right;
+    .list {
+      display: inline-flex;
+      flex-wrap: wrap;
+      > li {
+        display: flex;
+        margin-left: 8px;
+        margin-bottom: 8px;
+        padding: 4px 2px 4px 4px;
+        background-color: $color-background-accent;
+        border-radius: 8px;
+        input[type="text"] {
+          color: $color-text-reverse;
+          border-color: $color-border-ondark;
+          background-color: $color-background-accent;
+        }
+        button {
+          background-color: $color-clear;
+        }
+      }
+    }
+    .add {
+      width: 24px;
+      display: inline-flex;
+      padding-left: 4px;
+      background-color: $color-background;
+      text-align: right;
+      border-radius: 0;
+      align-items: center;
+      input[type="text"] {
+        color: $color-text;
+        background-color: $color-background;
+      }
+    }
+  }
+  .graphic-properties {
+    width: 100%;
+    .list {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      li {
+        width: 100%;
+      }
+      .add {
+        width: 24px;
+        text-align: right;
+        align-items: center;
+      }
+    }
+    .buttons {
+      padding: 8px 8px 0;
+      text-align: right;
+    }
+    .table {
+      width: 100%;
+      th,
+      td {
+        padding: 8px;
+      }
+      tr th:first-child,
+      tr td:first-child {
+        width: 24px;
+      }
+      .head {
+        border-bottom: 1px solid $color-border-onlight;
+      }
+      .active {
+        background-color: $color-background-modest;
+      }
+    }
+  }
+}
+

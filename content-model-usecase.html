@@ -1,0 +1,67 @@
+<!-- Product Name -->
+<div class="model-header">
+  <p class="item">
+    <span class="text">ユーザーが</span>
+    <input type="text" size="12" name="Product" value="" placeholder="Product Name" v-model="product">
+    <span class="text">でできること</span>
+  </p>
+
+  <!-- Add Object  -->
+  <div class="add">
+    <button class="button-mini style-reverse and-text" v-on:click="addObject">
+      <i class="icon-add">オブジェクトを追加</i>
+    </button>
+  </div>
+</div>
+
+<div id="model-usecase-list" class="model-main model-usecase">
+  <!-- Usecase Page -->
+  <div class="block-usecase frame-style">
+    <p class="title">ユースケース</p>
+    <ul class="item-list" v-if="objects.length" v-for="(object, index) in objects" v-bind:key="object.id">
+      <li>
+        ユーザーは 
+        <input type="text" size="8" placeholder="Object" v-model="object.name">
+        を
+      </li>
+      <li v-for="(action, index) in object.actions">
+        <input type="text" size="8" placeholder="Action" v-model="object.actions[index]" />
+        <button class="button-mini" v-on:click="removeAction(index, object)">
+          <i class="icon-remove" alt="Remove"></i>
+        </button>
+      </li>
+      <li>する</li>
+      <li class="add">
+        <button class="button-mini and-text" v-on:click="addAction(object)">
+          <i class="icon-add">{{ object.name }} に対して行うことを追加</i>
+        </button>
+      </li>
+    </ul>
+    <p v-else>データがありません</p>
+  </div>
+
+  <!-- Properties Page -->
+  <div class="block-usecase frame-style">
+    <p class="title">プロパティ</p>
+    <ul class="item-list" v-if="objects.length" v-for="(object, index) in objects" v-bind:key="object.id">
+      <li>
+        <input type="text" size="8" placeholder="Object" v-model="object.name">
+        は
+      </li>
+      <li v-for="(property, index) in object.properties"
+          v-bind:key="object.id">
+        <input type="text" size="8" placeholder="Property" v-model="object.properties[index]" />
+        <button class="button-mini" v-on:click="removeProperty(index, object)">
+          <i class="icon-remove" alt="Remove"></i>
+        </button>
+      </li>
+      <li>の情報をもつ</li>
+      <li class="add">
+        <button class="button-mini and-text" v-on:click="addProperty(object)">
+          <i class="icon-add">{{ object.name }} のプロパティを追加</i>
+        </button>
+      </li>
+    </ul>
+    <p v-else>データがありません</p>
+  </div>
+</div>

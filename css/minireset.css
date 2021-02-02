@@ -1,0 +1,80 @@
+/*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li,
+dl, dt, dd, blockquote,
+figure, fieldset, legend,
+textarea, pre, iframe,
+hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6, p h1, p h2, p h3, p h4, p h5, p h6, ol h1, ol h2, ol h3, ol h4, ol h5, ol h6, ul h1, ul h2, ul h3, ul h4, ul h5, ul h6, li h1, li h2, li h3, li h4, li h5, li h6,
+dl h1,
+dl h2,
+dl h3,
+dl h4,
+dl h5,
+dl h6, dt h1, dt h2, dt h3, dt h4, dt h5, dt h6, dd h1, dd h2, dd h3, dd h4, dd h5, dd h6, blockquote h1, blockquote h2, blockquote h3, blockquote h4, blockquote h5, blockquote h6,
+figure h1,
+figure h2,
+figure h3,
+figure h4,
+figure h5,
+figure h6, fieldset h1, fieldset h2, fieldset h3, fieldset h4, fieldset h5, fieldset h6, legend h1, legend h2, legend h3, legend h4, legend h5, legend h6,
+textarea h1,
+textarea h2,
+textarea h3,
+textarea h4,
+textarea h5,
+textarea h6, pre h1, pre h2, pre h3, pre h4, pre h5, pre h6, iframe h1, iframe h2, iframe h3, iframe h4, iframe h5, iframe h6,
+hr h1,
+hr h2,
+hr h3,
+hr h4,
+hr h5,
+hr h6, h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6, h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6, h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6, h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6, h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6, h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  list-style-position: inside;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img, embed, object, audio, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+  text-align: left;
+}
+/*# sourceMappingURL=minireset.css.map */

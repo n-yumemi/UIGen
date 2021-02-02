@@ -1,0 +1,557 @@
+/* --- * --- * --- * --- *
+  INDEX
+  * Import
+  * UI Common
+  * Model
+  * Graphic
+  * Model: Class
+  * Model: Usecase
+  * Graphic: Task-Orientation
+  * Graphic: Object-Orientation
+* --- * --- * --- * --- */
+/* --- * --- * --- * --- *
+  Import
+ * --- * --- * --- * --- */
+/* --- * --- * ---
+  Variable
+--- * --- * --- */
+/* Unique */
+/* Text */
+/* Border  */
+/* Background */
+/* System Color */
+/* User Defined */
+/* Font Size */
+/* Font Weight */
+/* Path */
+/* --- * --- * --- * --- *
+  UI Common
+ * --- * --- * --- * --- */
+.frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 700px;
+  height: 400px;
+  margin: auto;
+}
+
+.frame.model-class {
+  width: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.frame.graphic-task {
+  position: initial;
+  width: 350px;
+  height: 220px;
+  margin-bottom: 32px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.frame-style {
+  background-color: #FCFCFC;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0.2px 3.6px rgba(0, 0, 0, 0.1), 0 1.3px 10px rgba(0, 0, 0, 0.056), 0 4.8px 24.1px rgba(0, 0, 0, 0.05), 0 20px 80px rgba(0, 0, 0, 0.043);
+          box-shadow: 0 0.2px 3.6px rgba(0, 0, 0, 0.1), 0 1.3px 10px rgba(0, 0, 0, 0.056), 0 4.8px 24.1px rgba(0, 0, 0, 0.05), 0 20px 80px rgba(0, 0, 0, 0.043);
+}
+
+.button-mini {
+  padding: 0px 4px;
+  font-size: 0.75rem;
+  color: #888888;
+  background-color: #FCFCFC;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-mini.style-reverse {
+  color: #FCFCFC;
+  background-color: #888888;
+}
+
+.button-mini.and-text ::before {
+  margin-right: 4px;
+}
+
+/* --- * --- * --- * --- *
+  Model
+ * --- * --- * --- * --- */
+.model-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.model-header .item .text {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.model-header .add .button-mini {
+  padding: 0px 8px;
+}
+
+.model-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 16px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+/* --- * --- * --- * --- *
+  Graphic
+ * --- * --- * --- * --- */
+.graphic-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.graphic-header .add .button-mini {
+  padding: 0px 8px;
+}
+
+.graphic-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 40px;
+  background-color: #888888;
+  color: #FCFCFC;
+  border-radius: 4px 4px 0 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.graphic-navigation .title {
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.graphic-navigation .title .input {
+  color: #FCFCFC;
+  border-color: #adadad;
+  background-color: #888888;
+}
+
+.graphic-navigation .add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.graphic-navigation .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.graphic-navigation .menu > li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  padding-left: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.graphic-navigation .menu > li.active {
+  background-color: #adadad;
+}
+
+.graphic-navigation .menu > li.active input[type="text"] {
+  border-color: #d1d1d1;
+  background-color: #adadad;
+}
+
+.graphic-navigation .menu > li.active .button-mini {
+  background-color: #adadad;
+}
+
+.graphic-navigation .menu > li input[type="text"] {
+  color: #FCFCFC;
+  border-color: #adadad;
+  background-color: #888888;
+}
+
+.graphic-head {
+  padding: 8px 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.graphic-caption {
+  font-size: 0.75rem;
+}
+
+.graphic-caption.padding {
+  padding: 8px 8px 0;
+}
+
+.graphic-main {
+  font-size: 0.75rem;
+  overflow-y: auto;
+}
+
+.graphic-main .main {
+  overflow-y: auto;
+}
+
+/* --- * --- * --- * --- *
+  Model: Class
+ * --- * --- * --- * --- */
+.block-class {
+  width: 240px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 32px;
+  font-size: 0.75rem;
+}
+
+.block-class .block {
+  padding: 8px;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.block-class .block .buttons {
+  display: block;
+  text-align: right;
+}
+
+.block-class .block .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 4px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.block-class .block .list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.block-class .block .list > li .button-mini {
+  width: 24px;
+  margin-left: 8px;
+}
+
+.block-class .block input[type="text"] {
+  width: 100%;
+}
+
+.block-class .block.object-name {
+  padding-top: 0;
+  color: #FCFCFC;
+  border-color: #adadad;
+  background-color: #888888;
+  border-radius: 4px 4px 0 0;
+}
+
+.block-class .block.object-name input[type="text"] {
+  color: #FCFCFC;
+  border-color: #adadad;
+  background-color: #888888;
+}
+
+.block-class .block:last-child {
+  border-bottom: 0;
+}
+
+/* --- * --- * --- * --- *
+  Model: Usecase
+ * --- * --- * --- * --- */
+.model-usecase {
+  width: 100%;
+  font-size: 0.75rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.block-usecase {
+  width: 80%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 16px;
+  margin-bottom: 32px;
+}
+
+.block-usecase .title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.block-usecase .item-list {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.block-usecase .item-list > li {
+  display: inline-block;
+  margin-right: 4px;
+  margin-bottom: 8px;
+}
+
+.block-usecase .item-list > li button {
+  background-color: rgba(255, 0, 0, 0);
+}
+
+.block-usecase .item-list:last-child {
+  padding-bottom: 0px;
+  border-bottom: 0;
+}
+
+.block-usecase .item-list .add {
+  display: block;
+  margin-bottom: 0;
+}
+
+/* --- * --- * --- * --- *
+  Graphic: Task-Orientation
+ * --- * --- * --- * --- */
+.graphic-task .graphic-main {
+  height: calc(100% - 44px);
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.graphic-task .graphic-main.area {
+  padding: 8px;
+}
+
+.graphic-task .graphic-main .list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.graphic-task .graphic-main .list > li input[type="text"] {
+  width: 100%;
+}
+
+.graphic-task .graphic-main .list > li > .button-mini {
+  width: 24px;
+  margin-left: 8px;
+}
+
+.graphic-task .graphic-main .list > li.add {
+  padding: 8px;
+}
+
+.graphic-task .graphic-main .list > li.add > .button-mini {
+  width: 100%;
+  margin-left: 0;
+}
+
+.graphic-task .task-lead {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.graphic-task .task-property-buttons {
+  padding: 4px;
+}
+
+.graphic-task .task-property-table {
+  width: 100%;
+}
+
+.graphic-task .task-property-table th,
+.graphic-task .task-property-table td {
+  padding: 4px;
+  vertical-align: baseline;
+}
+
+.graphic-task .task-property-table tr th:first-child,
+.graphic-task .task-property-table tr td:first-child {
+  width: 24px;
+  text-align: center;
+}
+
+.graphic-task .task-property-table .head {
+  border-bottom: 1px solid #d1d1d1;
+}
+
+/* --- * --- * --- * --- *
+  Graphic: Object-Orientation
+ * --- * --- * --- * --- */
+.graphic-ooui {
+  margin: 40px auto;
+}
+
+.graphic-ooui .graphic-object-name {
+  font-weight: 400;
+}
+
+.graphic-ooui .graphic-actions {
+  text-align: right;
+}
+
+.graphic-ooui .graphic-actions .list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.graphic-ooui .graphic-actions .list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  padding: 4px 2px 4px 4px;
+  background-color: #888888;
+  border-radius: 8px;
+}
+
+.graphic-ooui .graphic-actions .list > li input[type="text"] {
+  color: #FCFCFC;
+  border-color: #adadad;
+  background-color: #888888;
+}
+
+.graphic-ooui .graphic-actions .list > li button {
+  background-color: rgba(255, 0, 0, 0);
+}
+
+.graphic-ooui .graphic-actions .add {
+  width: 24px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-left: 4px;
+  background-color: #FCFCFC;
+  text-align: right;
+  border-radius: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.graphic-ooui .graphic-actions .add input[type="text"] {
+  color: #2C2C2C;
+  background-color: #FCFCFC;
+}
+
+.graphic-ooui .graphic-properties {
+  width: 100%;
+}
+
+.graphic-ooui .graphic-properties .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.graphic-ooui .graphic-properties .list li {
+  width: 100%;
+}
+
+.graphic-ooui .graphic-properties .list .add {
+  width: 24px;
+  text-align: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.graphic-ooui .graphic-properties .buttons {
+  padding: 8px 8px 0;
+  text-align: right;
+}
+
+.graphic-ooui .graphic-properties .table {
+  width: 100%;
+}
+
+.graphic-ooui .graphic-properties .table th,
+.graphic-ooui .graphic-properties .table td {
+  padding: 8px;
+}
+
+.graphic-ooui .graphic-properties .table tr th:first-child,
+.graphic-ooui .graphic-properties .table tr td:first-child {
+  width: 24px;
+}
+
+.graphic-ooui .graphic-properties .table .head {
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.graphic-ooui .graphic-properties .table .active {
+  background-color: #e8e8e8;
+}
+/*# sourceMappingURL=underlayer.css.map */

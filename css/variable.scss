@@ -1,0 +1,45 @@
+/* --- * --- * ---
+  Variable
+--- * --- * --- */
+/* Unique */
+$color-main: #18b9b4;
+$color-main-modest: #e8fcfb;
+$color-main-week: #f9fefe;
+$color-accent: #ee3187;
+$color-accent-modest: #f37ab1;
+
+/* Text */
+$color-text: #2C2C2C;
+$color-text-modest: #7a7a7a;
+$color-text-sample: #a1a1a1;
+$color-text-reverse: #FCFCFC;
+
+/* Border  */
+$color-border-onlight: #d1d1d1;
+$color-border-ondark: #adadad;
+
+/* Background */
+$color-background: #FCFCFC;
+$color-background-modest: #e8e8e8;
+$color-background-highlight: #adadad;
+$color-background-accent: #888888;
+
+/* System Color */
+$color-white: #FFFFFF;
+$color-clear: rgba(255, 0, 0, 0);
+
+/* Font Size */
+$text-size-base: 0.75rem;
+$text-size-large: 1rem;
+$text-size-large-ex: 1.45rem;
+$text-size-large-ex-ex: 1.75rem;
+$text-size-mini: 0.65rem;
+
+/* Font Weight */
+$text-weight-nomal: 400;
+$text-weight-title: 700;
+$text-weight-parts: 500;
+
+/* Path */
+// https://fontawesome.com/how-to-use/on-the-web/using-with/sass
+$fa-font-path: "../assets/fontawesome-free-5.15.2-web/webfonts";
